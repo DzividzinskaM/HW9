@@ -4,6 +4,33 @@
 @import "./grid.scss";
 @import "./general.scss";
 
+
+%btn__text {
+  display: flex;
+  justify-content: center;  
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 1.4rem
+}
+
+%btn__accent {
+  @extend %btn__text;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background-color: $color-label;
+  text-transform: uppercase;
+}
+
+%btn__usually{
+  @extend %btn__text;
+  border-radius: 5px;
+  color: $color-dark; 
+  border: 1px solid grey;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
 .intro {
   height: 100vh;
   display: flex;
@@ -42,14 +69,10 @@
 
   }
   &__title {
-    font-size: 7.2rem;
-    font-weight: 700;
-    font-family: $font-title;
-    letter-spacing: 0.5rem;
+    
   }
   &__subtitle {
-    font-size: 3rem;
-    text-transform: uppercase;
+
     margin: 3rem 0 9rem;
   }
   &__form {
@@ -81,9 +104,8 @@
     width: 76%;
     font-family: $font-title;
     color: $color_usually;
-    padding: 0;
     border: 0;
-    
+    padding: 30px;
   }
   &__btn {
     width: 24%;
@@ -95,23 +117,10 @@
     background-size: cover;
     background-position: center;
     border-bottom: 0;
-/*     background-color: rgba(255, 255, 255, 0); */
   }
 }
 
 
-/* .inline-form {
-  margin: 0 -15px;
-  
-  &__search-field{
-    width: 76%;
-  }
-  &__btn-search {
-    width: 24%;
-
-  }
-}
- */
 .nav {
   &__item {
     padding: 0 12px;
@@ -147,17 +156,27 @@
     position: absolute;
     top: 3.2rem;
     height: 8rem;
-    border-left: 1px solid grey;
+    border-left: 1px solid $color-usually;
   }
  
 }
 
-
-
+/* %info-btn {
+  display: flex;
+  justify-content: center;  
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: $font-title;
+  color: $color-dark;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+}
+ */
 
 
 .destinations {
-  padding: 10rem 0;
+  padding: 17.5rem 0 8rem;
   &__container {
     margin-top: 8.5rem;
   }
@@ -168,6 +187,12 @@
       @include col-lg(8);
     }
   }
+  &__btn {
+    @extend %btn__usually;
+    margin-top: 10rem;
+    height: 6rem;
+    width: 31rem;
+  }
 }
 
 .destination {
@@ -175,13 +200,27 @@
   @media (min-width: $xl) {
     height: 37rem;
   }
-  background-image: url("../img/service1.png");
+  &--service1{
+    background-image: url("../img/service1.png");
+  }
+  &--service2{
+    background-image: url("../img/service2.png");
+  }
+  &--service3{
+    background-image: url("../img/service3.png");
+  }
+  &--service4{
+    background-image: url("../img/service4.png");
+  }
+  &--service5{
+    background-image: url("../img/service5.png");
+  }
   background-size: cover;
-  background-position: center;
+  background-position: center; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 2.5rem;
   position: relative;
   &::before {
     content: "";
@@ -193,11 +232,80 @@
     opacity: 0.6;
     mix-blend-mode: multiply;
     background: linear-gradient(#fff, #000);
+    z-index: -1;
+  }
+  &__label {
+    background-color: $color-label;
+    width: 8rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #fff;
+    border-radius: 0.6rem;
+  }
+  &__text {
+    z-index: 0;
+    font-family: $font-title;
+    color: #fff;
+  }
+  &__title {
+    font-size: 3rem;
+  }
+  &__subtitle{
+    padding-top: 1.5rem;
+    font-size: 2rem;
+  }
+
+}
+
+.boat-info {
+  background-image: url("../img/boat-info.png");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  color: #fff;
+  text-align: center; 
+  position: relative;
+  z-index: 0;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #201b5b;
+    z-index: -1;
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+  }
+  &__text {
+    padding-top: 19rem;
+  }
+  &__subtitle{
+    padding-top: 2.7rem;
+  } 
+  &__btn{
+    margin-top: 9rem;
+    @extend %btn__accent;
+    width: 32rem;
+    height: 5.5rem;
   }
 }
 
 .section-title {
   text-align: center;
+  &__title {
+    font-family: $font-main;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    padding: 30px 0 80px;
+  }
 }
 
 
@@ -211,3 +319,19 @@
   font-weight: 400;
   font-size: 1.6rem;
 }
+
+.title {
+  font-size: 7.2rem;
+  font-weight: 700;
+  font-family: $font-title;
+  letter-spacing: 0.5rem;
+}
+
+.subtitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: regular;
+}
+
+
+
