@@ -205,7 +205,7 @@ a {
 }
 
 /* line 119, ../../../Desktop/front-end/hw/hw9/scss/_grid.scss */
-.intro__form, .numbers__item, .destinations__item, .destinations__item--wide {
+.intro__form, .numbers__item, .destinations__item, .destinations__item--wide, .boats__item {
   padding: 0 15px;
 }
 
@@ -234,7 +234,7 @@ body {
 }
 
 /* line 8, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
-.boat-info__btn, .destinations__btn {
+.boat-info__btn, .destinations__btn, .boats__btn {
   display: flex;
   justify-content: center;
   font-family: "Raleway", sans-serif;
@@ -252,14 +252,34 @@ body {
 }
 
 /* line 25, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
-.destinations__btn {
+.destinations__btn, .boats__btn {
   border-radius: 5px;
   color: #343435;
   border: 1px solid grey;
   background-color: rgba(255, 255, 255, 0);
 }
 
-/* line 34, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 33, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.destination__text, .boat__text {
+  font-size: 3rem;
+  z-index: 2;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+/* line 41, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.destination__label, .boat__label {
+  background-color: #e8414c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 0.6rem;
+}
+
+/* line 54, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro {
   height: 100vh;
   display: flex;
@@ -271,9 +291,12 @@ body {
   z-index: 0;
   color: #fff;
   text-align: center;
+  /*   &__title {
+    
+  } */
 }
 
-/* line 45, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 65, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro::before {
   content: "";
   position: absolute;
@@ -287,14 +310,14 @@ body {
   mix-blend-mode: multiply;
 }
 
-/* line 57, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 77, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro__logo {
   position: absolute;
   top: 4.5rem;
   left: 25.5rem;
 }
 
-/* line 62, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 82, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro__nav {
   position: absolute;
   top: 4.5rem;
@@ -304,12 +327,12 @@ body {
   font-weight: bold;
 }
 
-/* line 74, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 94, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro__subtitle {
   margin: 3rem 0 9rem;
 }
 
-/* line 78, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 97, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro__form {
   border: 0;
   width: 100vw;
@@ -319,13 +342,13 @@ body {
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
-  /* line 78, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  /* line 97, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
   .intro__form {
     width: calc((100% / 12) * 8);
   }
 }
 
-/* line 88, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 107, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .intro__numbers {
   position: absolute;
   bottom: -65px;
@@ -335,7 +358,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* line 98, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 117, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .inline-form {
   width: 100%;
   display: flex;
@@ -343,7 +366,7 @@ body {
   border-radius: 50%;
 }
 
-/* line 103, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 122, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .inline-form__field {
   width: 76%;
   font-family: "Raleway", sans-serif;
@@ -352,7 +375,7 @@ body {
   padding: 30px;
 }
 
-/* line 110, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 129, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .inline-form__btn {
   width: 24%;
   display: flex;
@@ -365,13 +388,13 @@ body {
   border-bottom: 0;
 }
 
-/* line 125, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 144, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .nav__item {
   padding: 0 12px;
   color: #f9fafe;
 }
 
-/* line 129, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 148, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .nav__btn {
   background: rgba(255, 255, 255, 0);
   color: #f9fafe;
@@ -383,31 +406,31 @@ body {
   height: 4rem;
 }
 
-/* line 143, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 162, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .numbers__container {
   padding: 3.5rem 0;
 }
 
-/* line 146, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 165, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .numbers__item {
   height: 100%;
 }
 
 @media (min-width: 992px) {
-  /* line 146, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  /* line 165, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
   .numbers__item {
     width: calc((100% / 12) * 3);
   }
 }
 
-/* line 150, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 169, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .numbers__title {
   color: #343435;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* line 155, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 174, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .numbers__line {
   position: absolute;
   top: 3.2rem;
@@ -427,43 +450,43 @@ body {
   background-color: rgba(255, 255, 255, 0);
 }
  */
-/* line 178, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 197, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destinations {
   padding: 17.5rem 0 8rem;
 }
 
-/* line 180, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 199, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destinations__container {
   margin-top: 8.5rem;
 }
 
-/* line 183, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 202, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destinations__item {
   margin-bottom: 30px;
 }
 
 @media (min-width: 992px) {
-  /* line 183, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  /* line 202, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
   .destinations__item {
     width: calc((100% / 12) * 4);
   }
 }
 
 @media (min-width: 992px) {
-  /* line 186, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  /* line 205, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
   .destinations__item--wide {
     width: calc((100% / 12) * 8);
   }
 }
 
-/* line 190, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 209, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destinations__btn {
   margin-top: 10rem;
   height: 6rem;
   width: 31rem;
 }
 
-/* line 198, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 217, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination {
   height: 29rem;
   background-size: cover;
@@ -476,38 +499,38 @@ body {
 }
 
 @media (min-width: 1250px) {
-  /* line 198, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  /* line 217, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
   .destination {
     height: 37rem;
   }
 }
 
-/* line 203, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 222, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination--service1 {
   background-image: url("../img/service1.png");
 }
 
-/* line 206, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 225, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination--service2 {
   background-image: url("../img/service2.png");
 }
 
-/* line 209, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 228, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination--service3 {
   background-image: url("../img/service3.png");
 }
 
-/* line 212, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 231, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination--service4 {
   background-image: url("../img/service4.png");
 }
 
-/* line 215, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 234, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination--service5 {
   background-image: url("../img/service5.png");
 }
 
-/* line 225, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 244, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination::before {
   content: "";
   position: absolute;
@@ -518,42 +541,22 @@ body {
   opacity: 0.6;
   mix-blend-mode: multiply;
   background: linear-gradient(#fff, #000);
-  z-index: -1;
+  z-index: 1;
 }
 
-/* line 237, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
-.destination__label {
-  background-color: #e8414c;
-  width: 8rem;
-  height: 4.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.6rem;
-  color: #fff;
-  border-radius: 0.6rem;
-}
-
-/* line 249, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
-.destination__text {
-  z-index: 0;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-}
-
-/* line 254, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
-.destination__title {
-  font-size: 3rem;
-}
-
-/* line 257, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 259, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .destination__subtitle {
   padding-top: 1.5rem;
   font-size: 2rem;
 }
 
-/* line 264, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 263, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.destination__label {
+  width: 8rem;
+  height: 4.5rem;
+}
+
+/* line 271, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .boat-info {
   background-image: url("../img/boat-info.png");
   background-size: cover;
@@ -565,7 +568,7 @@ body {
   z-index: 0;
 }
 
-/* line 273, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 280, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .boat-info::before {
   content: "";
   position: absolute;
@@ -579,54 +582,176 @@ body {
   mix-blend-mode: multiply;
 }
 
-/* line 285, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 292, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .boat-info__text {
   padding-top: 19rem;
 }
 
-/* line 288, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 295, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .boat-info__subtitle {
   padding-top: 2.7rem;
 }
 
-/* line 291, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 298, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .boat-info__btn {
-  margin-top: 9rem;
+  position: relative;
+  top: 9rem;
   width: 32rem;
   height: 5.5rem;
 }
 
-/* line 299, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 307, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boats {
+  padding-top: 10rem;
+}
+
+/* line 309, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boats__item {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  /* line 309, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  .boats__item {
+    width: calc((100% / 12) * 6);
+  }
+}
+
+/* line 313, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boats__container {
+  margin-top: 9rem;
+}
+
+/* line 316, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boats__btn {
+  position: relative;
+  top: 9rem;
+  width: 23rem;
+  height: 5.5rem;
+}
+
+/* line 325, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat {
+  height: 29rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  position: relative;
+}
+
+@media (min-width: 1250px) {
+  /* line 325, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+  .boat {
+    height: 34rem;
+  }
+}
+
+/* line 330, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat--1 {
+  background-image: url("../img/boat1.png");
+}
+
+/* line 333, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat--2 {
+  background-image: url("../img/boat2.png");
+}
+
+/* line 336, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat--3 {
+  background-image: url("../img/boat3.png");
+}
+
+/* line 339, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat--4 {
+  background-image: url("../img/boat4.png");
+}
+
+/* line 349, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  background: linear-gradient(#fff, #000);
+  z-index: 0;
+}
+
+/* line 362, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat__label {
+  width: 10.5rem;
+  height: 4.2rem;
+}
+
+/* line 371, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.boat__subtitle {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: regular;
+  margin-top: 2rem;
+}
+
+/* line 381, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.img-label__map {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* line 386, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.img-label__people-number {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* line 392, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.subtitle__map {
+  display: flex;
+}
+
+/* line 395, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+.subtitle__people {
+  display: flex;
+  padding-left: 2rem;
+}
+
+/* line 405, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .section-title {
   text-align: center;
 }
 
-/* line 301, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 407, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .section-title__title {
   font-family: "Open Sans", sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
 }
 
-/* line 306, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 412, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .section-title__subtitle {
   padding: 30px 0 80px;
 }
 
-/* line 312, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 418, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .row--center {
   display: flex;
   justify-content: center;
 }
 
-/* line 317, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 423, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .usually-text {
   color: #717171;
   font-weight: 400;
   font-size: 1.6rem;
 }
 
-/* line 323, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 429, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .title {
   font-size: 7.2rem;
   font-weight: 700;
@@ -634,7 +759,7 @@ body {
   letter-spacing: 0.5rem;
 }
 
-/* line 330, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
+/* line 436, ../../../Desktop/front-end/hw/hw9/scss/main.scss */
 .subtitle {
   font-size: 3rem;
   text-transform: uppercase;

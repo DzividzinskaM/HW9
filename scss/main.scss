@@ -30,6 +30,26 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
+%title-on-img {
+  font-size: 3rem;
+  z-index: 2;
+  font-family: $font-title;
+  color: #fff;
+}
+
+
+%label {
+  background-color: $color-label;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 0.6rem;
+}
+
+
 
 .intro {
   height: 100vh;
@@ -68,11 +88,10 @@
     font-weight: bold;
 
   }
-  &__title {
+/*   &__title {
     
-  }
+  } */
   &__subtitle {
-
     margin: 3rem 0 9rem;
   }
   &__form {
@@ -232,31 +251,19 @@
     opacity: 0.6;
     mix-blend-mode: multiply;
     background: linear-gradient(#fff, #000);
-    z-index: -1;
-  }
-  &__label {
-    background-color: $color-label;
-    width: 8rem;
-    height: 4.5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.6rem;
-    color: #fff;
-    border-radius: 0.6rem;
+    z-index: 1;
   }
   &__text {
-    z-index: 0;
-    font-family: $font-title;
-    color: #fff;
-  }
-  &__title {
-    font-size: 3rem;
+   @extend %title-on-img;
   }
   &__subtitle{
     padding-top: 1.5rem;
     font-size: 2rem;
+  }
+  &__label {
+    @extend %label;
+    width: 8rem;
+    height: 4.5rem;
   }
 
 }
@@ -289,12 +296,111 @@
     padding-top: 2.7rem;
   } 
   &__btn{
-    margin-top: 9rem;
+    position: relative;
+    top: 9rem;
     @extend %btn__accent;
     width: 32rem;
     height: 5.5rem;
   }
 }
+
+.boats {
+  padding-top: 10rem;
+  &__item {
+    @include col-lg(6);
+    margin-bottom: $gutter * 2;
+  }
+  &__container {
+    margin-top: 9rem;
+  }
+  &__btn {
+    position: relative;
+    top: 9rem;
+    @extend %btn__usually;
+    width: 23rem;
+    height: 5.5rem;
+  }
+}
+
+.boat {
+  height: 29rem;
+  @media (min-width: $xl) {
+    height: 34rem;
+  }
+  &--1{
+    background-image: url("../img/boat1.png");
+  }
+  &--2{
+    background-image: url("../img/boat2.png");
+  }
+  &--3{
+    background-image: url("../img/boat3.png");
+  }
+  &--4{
+    background-image: url("../img/boat4.png");
+  }
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    background: linear-gradient(#fff, #000);
+    z-index: 0;
+  }
+
+  &__label {
+    @extend %label;
+    width: 10.5rem;
+    height: 4.2rem;
+  }
+
+  &__text {
+    @extend %title-on-img;
+  }
+  &__subtitle {
+    display: flex;
+    font-family: $font-main;
+    font-size: 1.6rem;
+    font-weight: regular;
+    margin-top: 2rem;
+  }
+ 
+}
+
+.img-label__map {
+  width: 2rem;
+  height: 2rem;
+}
+
+.img-label__people-number {
+  width: 2rem;
+  height: 2rem; 
+}
+
+.subtitle {
+  &__map {
+   display: flex;
+  }
+  &__people {
+    display: flex;
+    padding-left: 2rem;
+  }
+ 
+}
+
+
+
 
 .section-title {
   text-align: center;
@@ -332,6 +438,5 @@
   text-transform: uppercase;
   font-weight: regular;
 }
-
 
 
