@@ -39,7 +39,7 @@
 
 %btn__usually{
   @extend %btn__text;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   color: $color-dark; 
   border: 1px solid grey;
   background-color: rgba(255, 255, 255, 0);
@@ -91,17 +91,45 @@
   }
   &__logo {
    position: absolute;
-   top: 4.5rem;
-   left: 25.5rem;
+   top: 2rem;
+   left: 2rem;  
+   @media(min-width: $md){
+    top: 2.7rem;
+    left: 15.6rem; 
+   }
+   @media(min-width: $lg){
+    top: 3.5rem;
+    left: 20.2rem; 
+   }
+   @media(min-width: $xl){
+    top: 4.5rem;
+    left: 25.5rem;
+   }
   }
+
+
   &__nav {
     position: absolute;
-    top: 4.5rem;
-    right: 25rem;
-    font-size: 16px;
+    top: 2rem;
+    right: 2rem; 
+    @media(min-width: $xl){
+      top: 4.5rem;
+      right: 25.5rem;
+     }
+     @media(min-width: $lg){
+      top: 3.5rem;
+      right: 20.2rem; 
+     }
+     @media(min-width: $md){
+      top: 2.7rem;
+      right: 15.6rem; 
+     }
+     
+    font-size: 1.6rem;
     font-family: $font-title;
     font-weight: bold;
 
+    
   }
   &__subtitle {
     margin: 3rem 0 9rem;
@@ -112,15 +140,18 @@
   }
   &__btn {
     @extend %form-btn;
-    width: 20rem;
+    @media(min-width: $lg) {
+      width: 20rem;
+    }
+    width: 24vw;//9.2rem;
   }
   &__numbers{
     position: absolute;
-    bottom: -65px;
+    bottom: -6.5rem;
     background-color: #fff;
     height: 14rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
   }
 }
 
@@ -128,7 +159,10 @@
   height: 6rem;
   &__field {
     @extend %form-input;
-    width: 57rem;
+    width: 76vw;//26.2rem;
+    @media(min-width: $lg){
+      width: 57rem;
+    }
     padding: 2rem;
   }
 }
@@ -137,7 +171,7 @@
 
 .nav {
   &__item {
-    padding: 0 12px;
+    padding: 0 1.2rem;
     color: $color-light;
   }
   &__btn{
@@ -145,7 +179,7 @@
     color: $color-light;
     font-family: $font-title;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 2rem;
     border: 1px solid #fff;
     width: 15rem;
     height: 4rem;
@@ -164,13 +198,16 @@
   &__title{
     color: $color-dark;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 3rem;
   }
   &__line {
+    @media (min-width: $lg){
+      border-left: 1px solid $color-usually;
+    }
     position: absolute;
     top: 3.2rem;
     height: 8rem;
-    border-left: 1px solid $color-usually;
+   
   }
  
 }
@@ -375,11 +412,12 @@
 }
 
 .footer {
-  height: 38vh;
+/*   position: absolute;
+  bottom: 0; */
+  height: 38%;
   background-image: url("../img/footer-bg.png");
   background-size: cover;
   background-position: start;
- 
   
   &__item {
     @include col-lg(2);
@@ -458,7 +496,7 @@
     text-transform: uppercase;
   }
   &__subtitle {
-    padding: 30px 0 80px;
+    padding: 3rem 0 8rem;
   }
 }
 
