@@ -4,6 +4,30 @@
 @import "./grid.scss";
 @import "./general.scss";
 
+%form-input {
+  display: flex;
+  border: 0;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background-color: #fff;
+  height: 100%;
+}
+
+
+%btn__accent {
+  @extend %btn__text;
+  border: 0;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: $color-label;
+  text-transform: uppercase;
+}
+
+
+%form-btn {
+  @extend %btn__accent;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
 
 %btn__text {
   display: flex;
@@ -11,15 +35,6 @@
   font-family: $font-title;
   font-weight: bold;
   font-size: 1.4rem
-}
-
-%btn__accent {
-  @extend %btn__text;
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  background-color: $color-label;
-  text-transform: uppercase;
 }
 
 %btn__usually{
@@ -88,21 +103,16 @@
     font-weight: bold;
 
   }
-/*   &__title {
-    
-  } */
   &__subtitle {
     margin: 3rem 0 9rem;
   }
   &__form {
-    @media(min-width: $lg){
-      @include col-lg(8);
-    }
-    border: 0;
-    width: 100vw;
-    height: 6rem;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+  }
+  &__btn {
+    @extend %form-btn;
+    width: 20rem;
   }
   &__numbers{
     position: absolute;
@@ -115,29 +125,14 @@
 }
 
 .inline-form {
-  width: 100%;
-  display: flex;  
-  font-size: 1.4rem;
-  border-radius: 50%;
+  height: 6rem;
   &__field {
-    width: 76%;
-    font-family: $font-title;
-    color: $color_usually;
-    border: 0;
-    padding: 30px;
-  }
-  &__btn {
-    width: 24%;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-image: url("../img/btn-logo.png");
-    background-size: cover;
-    background-position: center;
-    border-bottom: 0;
+    @extend %form-input;
+    width: 57rem;
+    padding: 2rem;
   }
 }
+
 
 
 .nav {
@@ -306,6 +301,7 @@
 
 .boats {
   padding-top: 10rem;
+  padding-bottom: 20rem;
   &__item {
     @include col-lg(6);
     margin-bottom: $gutter * 2;
@@ -374,6 +370,58 @@
     font-size: 1.6rem;
     font-weight: regular;
     margin-top: 2rem;
+  }
+ 
+}
+
+.footer {
+  height: 38vh;
+  background-image: url("../img/footer-bg.png");
+  background-size: cover;
+  background-position: start;
+ 
+  
+  &__item {
+    @include col-lg(2);
+    padding: 0 $gutter*2;
+    &--wide {
+      @include col-lg(6);
+      padding: 0 $gutter*2;
+     /*  margin: $gutter * 2; */
+    }
+  }
+  &__item-container {
+    margin-top: 6.5rem;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  &__title {
+    font-family: $font-title;
+    font-weight: bold;
+    padding-bottom: 2.5rem;
+  }
+  &__text{
+    font-weight: regular;
+    line-height: 2;
+  }
+  &__subscribe {
+    display: flex;
+    justify-content: start;
+  }
+  &__btn {
+    @extend %form-btn;
+    width: 15rem;
+  }
+}
+
+.subscribe {
+  &__field {
+    height: 4.2rem;
+  }
+  &__input {
+    @extend %form-input;
+    width: 27rem;
+    padding: 2rem;
   }
  
 }
