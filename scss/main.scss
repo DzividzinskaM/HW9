@@ -89,17 +89,6 @@
     opacity: 0.6;
     mix-blend-mode: multiply;
   }
-  &__title{
-    font-size: 7.2rem;
-    font-weight: 700;
-    font-family: $font-title;
-    letter-spacing: 0.5rem;
-  }
-  &__subtitle {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: regular;
-  }
   &__logo {
    position: absolute;
    top: 2rem;
@@ -505,7 +494,18 @@
  
 }
 
+.title {
+  font-size: 7.2rem;
+    font-weight: 700;
+    font-family: $font-title;
+    letter-spacing: 0.5rem;
+}
 
+.subtitle {
+  font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: regular;
+}
 
 
 .section-title {
